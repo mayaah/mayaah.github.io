@@ -211,3 +211,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	margin-left: auto;
 }
 
+.bottom {
+	text-align: center;
+	padding-top: 75px;
+	font-size: 1.5em;
+}

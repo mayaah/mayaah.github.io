@@ -126,6 +126,12 @@ $(".navbar-default .navbar-nav li").mouseover(function() {
 	$(this).siblings().removeClass("fade1");
 });
 
+// Name toggle
+$(".there").hover(function() {
+	$(".expand").show(1000);
+});
+
+
 // $("body").click(function() {
 // 	$("body").fadeIn(500, function() {
 // 		$("body").addClass("blue");

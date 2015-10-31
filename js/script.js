@@ -59,6 +59,8 @@
 
 $(document).ready(function() {
 
+	$(".expand").delay(1500).show(1000);
+
 	$(".navbar-default .navbar-nav li").not("#home").click(function() {
 		event.preventDefault();
 		$(".middle img").fadeOut(500);
@@ -97,18 +99,21 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(".navbar-default .navbar-nav li a").css("color", "#2C2C2D");
 		$("body").css("background", "#FEE43D");
+		$(".middle").css("display", "none");
 	});
 
 	$("#skills").click(function(event) {
 		event.preventDefault();
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$("body").css("background", "#2572FF");
+		$(".middle").css("display", "none");
 	});
 
 	$("#contact").click(function(event) {
 		event.preventDefault();
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$("body").css("background", "#3820BF");
+		$(".middle").css("display", "none");
 	});
 
 });
@@ -127,9 +132,9 @@ $(".navbar-default .navbar-nav li").mouseover(function() {
 });
 
 // Name toggle
-$(".there").hover(function() {
-	$(".expand").show(1000);
-});
+// $(".there").hover(function() {
+// 	$(".expand").show(1000);
+// });
 
 
 // $("body").click(function() {
@@ -145,6 +150,9 @@ $(".there").hover(function() {
 // $(".navbar-default .navbar-nav li #home").click(function() {
 // 	$(".middle img").fadeIn(500);
 // });
+
+
+
 
 
 

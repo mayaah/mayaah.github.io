@@ -13,6 +13,7 @@ body {
 	min-height: 100vh;
 	transition: background 10s ease;
 
+
 }
 
 .sunrise {
@@ -132,7 +133,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	}
 }
 
-.middle .container {
+.middle {
 	display: block;
 	min-height: 100%;
 /*	min-height: 100vh;*/
@@ -140,21 +141,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding-top: 150px;
+	padding-top: 100px;
 	text-align: center;
 	font-size: 3em;
 	letter-spacing: 10px;
 	font-weight: 200;
-
-
 }
 
-.middle img{
-	display: block;
-	width: 250px;
-	margin-right: auto;
-	margin-left: auto;
-}
 
 .there {
 	font-weight: 300;
@@ -170,57 +163,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 }
 
 
-.modal-open .modal,.btn:focus, a:focus{
-	outline:none!important;
-}
-
-#profilepic {
-	display: block;
-	width: 200px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 40px;
-
-}
-
-.aboutmiddle {
-	margin-top: 10px;
-}
-
-#halfsun {
-	margin-right: auto;
-	margin-left: auto;
-	width: 150%;
-	position: absolute;
-}
-
-.abouttext{
-	padding: 50px;
-	position:relative;
-	color: #2C2C2D;
-	letter-spacing: 3px;
-	text-align: center;
-	font-size: 15px;
-	text-transform: uppercase;
-	line-height: 30px;
-}
-
-.lilsun {
-	width: 100px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-#sunz {
-	padding-bottom: 20px;
-}
-
-.abouttext {
-	width: 100px;
-	height: 190px;
-	text-align: center;
-}
-
 .about {
 	width: 100px;
 	display: none;
@@ -229,9 +171,141 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	margin-left: auto;
 }
 
-.bottom {
-	text-align: center;
-	padding-top: 75px;
-	font-size: 1.5em;
+
+
+
+.sky {
+	height: 425px;
+	position: relative;
+	overflow: hidden;
+	-webkit-animation:sky_background 50s ease-out infinite;
+	-moz-animation:sky_background 50s ease-out infinite;
+	-o-animation:sky_background 50s ease-out infinite;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+	padding-top: 10px;
 }
+
+
+.clouds_one {
+	background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_one.png");
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:300%;
+	-webkit-animation:cloud_one 50s linear infinite;
+	-moz-animation:cloud_one 50s linear infinite;
+	-o-animation:cloud_one 50s linear infinite;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+}
+		
+.clouds_two {
+	background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_two.png");
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:300%;
+	-webkit-animation:cloud_two 75s linear infinite;
+	-moz-animation:cloud_two 75s linear infinite;
+	-o-animation:cloud_two 75s linear infinite;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+}
+		
+.clouds_three {
+	background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:300%;
+	-webkit-animation:cloud_three 100s linear infinite;
+	-moz-animation:cloud_three 100s linear infinite;
+	-o-animation:cloud_three 100s linear infinite;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+}
+
+
+@-webkit-keyframes cloud_one {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+		
+@-webkit-keyframes cloud_two {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+		
+@-webkit-keyframes cloud_three {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+		
+		
+@-moz-keyframes cloud_one {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+		
+@-moz-keyframes cloud_two {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+		
+@-moz-keyframes cloud_three {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

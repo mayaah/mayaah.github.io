@@ -80,6 +80,11 @@ $(document).ready(function() {
 			$(".middle").css("display", "block");
 			$(".middle img").fadeIn(500);
 		});
+		$(".contactmiddle").fadeOut(500, function() {
+			$(".contactmiddle").css("dipslay", "none");
+			$(".middle").css("display", "block");
+			$(".middle img").fadeIn(500);
+		});
 		$("body").css("background", "#FF9595");
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		
@@ -112,8 +117,10 @@ $(document).ready(function() {
 	$("#contact").click(function(event) {
 		event.preventDefault();
 		$(".navbar-default .navbar-nav li a").css("color", "white");
-		$("body").css("background", "#3820BF");
+		$("body").css("background", "#16002F");
 		$(".middle").css("display", "none");
+		$(".contactmiddle").delay(1000).fadeIn(1000)
+		return false;
 	});
 
 });

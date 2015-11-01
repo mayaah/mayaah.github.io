@@ -55,6 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 }
 
 .navbar {
+	z-index: 1000;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	font-size: 16px;
@@ -171,6 +172,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	margin-left: auto;
 }
 
+.aboutmiddle img{
+	height: 300%;
+}
+
 
 
 
@@ -178,18 +183,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	height: 425px;
 	position: relative;
 	overflow: hidden;
-	-webkit-animation:sky_background 50s ease-out infinite;
-	-moz-animation:sky_background 50s ease-out infinite;
-	-o-animation:sky_background 50s ease-out infinite;
-	-webkit-transform:translate3d(0,0,0);
-	-moz-transform:translate3d(0,0,0);
-	-o-transform:translate3d(0,0,0);
 	padding-top: 10px;
 }
 
 
 .clouds_one {
-	background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_one.png");
+	background:url(img/cloud_one.png);
 	position:absolute;
 	left:0;
 	top:0;
@@ -204,7 +203,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 }
 		
 .clouds_two {
-	background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_two.png");
+	background:url(img/cloud_two.png);
 	position:absolute;
 	left:0;
 	top:0;
@@ -219,7 +218,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 }
 		
 .clouds_three {
-	background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+	background:url(img/cloud_three.png);
 	position:absolute;
 	left:0;
 	top:0;
@@ -295,14 +294,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	}
 }
 
+@-webkit-keyframes stars {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
+
+@-moz-keyframes stars {
+	0% {
+		left:0
+	}
+		
+	100% {
+		left:-200%
+	}
+}
 
 
+.stars {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:300%;
+  height:100%;
+  display:block;
+  background:transparent url("img/stars.png")  repeat top center;
+  -webkit-animation:stars 200s linear infinite;
+	-moz-animation:stars 200s linear infinite;
+	-o-animation:stars 200s linear infinite;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
 
-
-
-
-
-
+}
 
 
 

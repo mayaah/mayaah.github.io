@@ -309,6 +309,67 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	}
 }
 
+.aboutmiddle {
+	margin-top: 50px;
+
+}
+
+.circle {
+	width: 500px;
+	height: 500px;
+	background: #FFDD66;
+	-moz-border-radius: 250px;
+	-webkit-border-radius: 250px;
+	border-radius: 250px;
+	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  	animation: neon1 1.5s ease-in-out infinite alternate;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+}
+
+.cinfo {
+	display: none;
+	padding: 125px 50px 50px 50px;
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+}
+
+.cinfo h3{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: 0 30px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+.cinfo p {
+	padding: 10px 5px;
+	font-style: italic;
+	marign: 0 30px;
+	font-weight: 300;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	text-align: justify;
+
+}
+
+
+
+@-webkit-keyframes neon1 {
+  from {
+    box-shadow: 0 0 15px #FFDD66, 0 0 30px #FFDD66, 0 0 45px #FFDD66, 0 0 60px #FFDD66, 0 0 105px #FFDD66, 0 0 120px #FFDD66, 0 0 150px #FFDD66, 0 0 225px #FFDD66;
+  }
+  to {
+    box-shadow: 0 0 5px #FFDD66, 0 0 10px #FFDD66, 0 0 15px #FFDD66, 0 0 20px #FFDD66, 0 0 35px #FFDD66, 0 0 40px #FFDD66, 0 0 50px #FFDD66, 0 0 75px #FFDD66;
+  }
+}
+
 
 .stars {
   position:absolute;

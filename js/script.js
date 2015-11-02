@@ -61,6 +61,7 @@ $(document).ready(function() {
 
 	$(".expand").delay(1500).show(1000);
 
+
 	$(".navbar-default .navbar-nav li").not("#home").click(function() {
 		event.preventDefault();
 		$(".middle img").fadeOut(500);
@@ -98,6 +99,8 @@ $(document).ready(function() {
 		$(".middle").css("display", "none");
 		$(".contactmiddle").css("display", "none");
 		$(".aboutmiddle").delay(1000).fadeIn(1000);
+		$(".cinfo").delay(3000).fadeIn(2000);
+
 		return false;
 	});
 

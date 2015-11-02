@@ -172,11 +172,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	margin-left: auto;
 }
 
-.aboutmiddle img{
-	height: 300%;
-}
-
-
 
 
 .sky {
@@ -334,8 +329,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 
 }
 
+.ciconlist {
+	margin-top: 150px;
+}
 
-
-
+.cicon img{
+	width: 75%;
+}
 
 

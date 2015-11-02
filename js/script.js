@@ -96,6 +96,7 @@ $(document).ready(function() {
 		$("body").css("background", "#95D9FF");
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$(".middle").css("display", "none");
+		$(".contactmiddle").css("display", "none");
 		$(".aboutmiddle").delay(1000).fadeIn(1000);
 		return false;
 	});

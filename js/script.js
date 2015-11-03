@@ -64,12 +64,13 @@ $(document).ready(function() {
 	$(".projectsmiddle").css("display", "none");
 
 
-	$(".navbar-default .navbar-nav li").not("#home").click(function() {
+
+	$(".navbar-default .navbar-nav li").not("#home #resume").click(function() {
 		event.preventDefault();
 		$(".middle img").fadeOut(500);
 	});
 
-	$(".navbar-default .navbar-nav li").not("#about").click(function() {
+	$(".navbar-default .navbar-nav li").not("#about #resume").click(function() {
 		event.preventDefault();
 		console.log("TRUE");
 		$(".aboutmiddle").fadeOut(500);

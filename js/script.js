@@ -65,17 +65,17 @@ $(document).ready(function() {
 
 
 
-	$(".navbar-default .navbar-nav li").not("#home #resume").click(function() {
-		event.preventDefault();
-		$(".middle img").fadeOut(500);
-	});
+	// $(".navbar-default .navbar-nav li").not("#home").click(function() {
+	// 	event.preventDefault();
+	// 	$(".middle img").fadeOut(500);
+	// });
 
-	$(".navbar-default .navbar-nav li").not("#about #resume").click(function() {
-		event.preventDefault();
-		console.log("TRUE");
-		$(".aboutmiddle").fadeOut(500);
-		$(".aboutmiddle").css("dipslay", "none");
-	});
+	// $(".navbar-default .navbar-nav li").not("#about").click(function() {
+	// 	event.preventDefault();
+	// 	console.log("TRUE");
+	// 	$(".aboutmiddle").fadeOut(500);
+	// 	$(".aboutmiddle").css("dipslay", "none");
+	// });
 
 	$("#home").click(function(event) {
 		event.preventDefault();
@@ -110,6 +110,7 @@ $(document).ready(function() {
 		$("body").css("background", "#95D9FF");
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$(".middle").css("display", "none");
+		$(".aboutmiddle").css("display", "none");
 		$(".contactmiddle").css("display", "none");
 		$(".skillsmiddle").css("display", "none");
 		$(".aboutmiddle").delay(1000).fadeIn(1000);
@@ -123,6 +124,7 @@ $(document).ready(function() {
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$("body").css("background", "#FF761D");
 		$(".middle").css("display", "none");
+		$(".aboutmiddle").css("display", "none");
 		$(".skillsmiddle").css("display", "none");
 		$(".contactmiddle").css("display", "none");
 		$(".projectsmiddle").delay(1000).fadeIn(1000);
@@ -133,6 +135,7 @@ $(document).ready(function() {
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$("body").css("background", "#7F8199");
 		$(".middle").css("display", "none");
+		$(".aboutmiddle").css("display", "none");
 		$(".contactmiddle").css("display", "none");
 		$(".projectsmiddle").css("display", "none");
 		$(".skillsmiddle").delay(1000).fadeIn(1000);

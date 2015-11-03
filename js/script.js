@@ -60,6 +60,7 @@
 $(document).ready(function() {
 
 	$(".expand").delay(1500).show(1000);
+	$(".skillsmiddle").css("display", "none");
 
 
 	$(".navbar-default .navbar-nav li").not("#home").click(function() {
@@ -86,6 +87,11 @@ $(document).ready(function() {
 			$(".middle").css("display", "block");
 			$(".middle img").fadeIn(500);
 		});
+		$(".skillsmiddle").fadeOut(500, function() {
+			$(".skillsmiddle").css("dipslay", "none");
+			$(".middle").css("display", "block");
+			$(".middle img").fadeIn(500);
+		});
 		$("body").css("background", "#FF9595");
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		
@@ -98,6 +104,7 @@ $(document).ready(function() {
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$(".middle").css("display", "none");
 		$(".contactmiddle").css("display", "none");
+		$(".skillsmiddle").css("display", "none");
 		$(".aboutmiddle").delay(1000).fadeIn(1000);
 		$(".cinfo").delay(3000).fadeIn(2000);
 
@@ -106,16 +113,25 @@ $(document).ready(function() {
 
 	$("#projects").click(function(event) {
 		event.preventDefault();
-		$(".navbar-default .navbar-nav li a").css("color", "#2C2C2D");
-		$("body").css("background", "#FEE43D");
+		$(".navbar-default .navbar-nav li a").css("color", "white");
+		$("body").css("background", "#FF761D");
 		$(".middle").css("display", "none");
+		$(".skillsmiddle").css("display", "none");
+		$(".contactmiddle").css("display", "none");
 	});
 
 	$("#skills").click(function(event) {
 		event.preventDefault();
 		$(".navbar-default .navbar-nav li a").css("color", "white");
-		$("body").css("background", "#2572FF");
+		$("body").css("background", "#7F8199");
 		$(".middle").css("display", "none");
+		$(".contactmiddle").css("display", "none");
+		$(".skillsmiddle").delay(1000).fadeIn(1000);
+		$(".bar").each(function(){
+        	var length = $(this).find("span").html();
+        	$(this).find("p").delay(1000).animate({'height':length},5000,function(){$(this).find("span").fadeIn(2000);
+        	});
+    	});
 	});
 
 	$("#contact").click(function(event) {
@@ -123,6 +139,7 @@ $(document).ready(function() {
 		$(".navbar-default .navbar-nav li a").css("color", "white");
 		$("body").css("background", "#16002F");
 		$(".middle").css("display", "none");
+		$(".skillsmiddle").css("display", "none");
 		$(".contactmiddle").delay(1000).fadeIn(1000)
 		return false;
 	});
@@ -161,6 +178,170 @@ $(".navbar-default .navbar-nav li").mouseover(function() {
 // $(".navbar-default .navbar-nav li #home").click(function() {
 // 	$(".middle img").fadeIn(500);
 // });
+
+// Rain
+var rain = [], drops = [];
+
+var gravity = 0.2;
+var wind = 0.015;
+var rain_chance = 0.4;
+
+window.requestAnimFrame =
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+        window.setTimeout(callback, 1000 / 60);
+    };
+
+var canvas = document.getElementById('c');
+var ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+//--------------------------------------------
+
+var Vector = function(x, y) {
+
+  this.x = x || 0;
+  this.y = y || 0;
+};
+
+Vector.prototype.add = function(v) {
+
+  if (v.x != null && v.y != null) {
+
+    this.x += v.x;
+    this.y += v.y;
+
+  } else {
+
+    this.x += v;
+    this.y += v;
+  }
+
+  return this;
+};
+
+Vector.prototype.copy = function() {
+
+  return new Vector(this.x, this.y);
+};
+
+//--------------------------------------------
+
+var Rain = function() {
+
+  this.pos = new Vector(Math.random() * canvas.width, -50);
+  this.prev = this.pos;
+
+  this.vel = new Vector();
+};
+
+Rain.prototype.update = function() {
+
+  this.prev = this.pos.copy();
+
+  this.vel.y += gravity;
+  this.vel.x += wind;
+
+  this.pos.add(this.vel);
+};
+
+Rain.prototype.draw = function() {
+
+  ctx.beginPath();
+  ctx.moveTo(this.pos.x, this.pos.y);
+  ctx.lineTo(this.prev.x, this.prev.y);
+  ctx.stroke();
+};
+
+//--------------------------------------------
+
+var Drop = function(x, y) {
+
+  var dist = Math.random() * 7;
+  var angle = Math.PI + Math.random() * Math.PI;
+
+  this.pos = new Vector(x, y);
+
+  this.vel = new Vector(
+    Math.cos(angle) * dist,
+    Math.sin(angle) * dist
+    );
+};
+
+Drop.prototype.update = function() {
+
+  this.vel.y += gravity;
+
+  this.vel.x *= 0.95;
+  this.vel.y *= 0.95;
+
+  this.pos.add(this.vel);
+};
+
+Drop.prototype.draw = function() {
+
+  ctx.beginPath();
+  ctx.arc(this.pos.x, this.pos.y, 1, 0, Math.PI * 2);
+  ctx.fill();
+};
+
+//--------------------------------------------
+
+function update() {
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  var i = rain.length;
+  while (i--) {
+
+    var raindrop = rain[i];
+
+    raindrop.update();
+
+    if (raindrop.pos.y >= canvas.height) {
+
+      var n = Math.round(4 + Math.random() * 4);
+
+      while (n--)
+      drops.push(new Drop(raindrop.pos.x, canvas.height));
+
+      rain.splice(i, 1);
+    }
+
+    raindrop.draw();
+  }
+
+  var i = drops.length;
+  while (i--) {
+
+    var drop = drops[i];
+    drop.update();
+    drop.draw();
+
+    if (drop.pos.y > canvas.height) drops.splice(i, 1);
+  }
+
+  if (Math.random() < rain_chance) rain.push(new Rain());
+
+  requestAnimFrame(update);
+}
+
+function init() {
+
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = '#CCFFFF';
+  ctx.fillStyle = '#CCFFFF';
+
+  update();
+}
+
+init();
+
 
 
 

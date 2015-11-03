@@ -16,6 +16,7 @@ body {
 
 }
 
+
 .sunrise {
 	background: rgb(237,204,165); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(237,204,165,1) 0%, rgba(254,144,144,1) 71%, rgba(237,101,159,1) 100%); /* FF3.6+ */
@@ -368,6 +369,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
   to {
     box-shadow: 0 0 5px #FFDD66, 0 0 10px #FFDD66, 0 0 15px #FFDD66, 0 0 20px #FFDD66, 0 0 35px #FFDD66, 0 0 40px #FFDD66, 0 0 50px #FFDD66, 0 0 75px #FFDD66;
   }
+}
+
+
+.skillsmiddle {
+	height: 100%;
+}
+
+canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+
+}
+
+.skills {
+	position: relative;
+	z-index: 10;
+	margin-top: 150px;
+
+}
+
+.bar {
+/*	width: 50px;*/
+	height: 200px;
+/*	background-color: #CCFFFF*/
+	position: relative;
+}
+.bar p {
+	background-color: #CCFFFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #CCFFFF;
 }
 
 

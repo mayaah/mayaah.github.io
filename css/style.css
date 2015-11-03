@@ -404,6 +404,177 @@ canvas {
 	color: #CCFFFF;
 }
 
+.lb-album {
+	margin-top: 50px;
+
+}
+
+.proj{
+
+	float: left;
+	position: relative;
+	list-style-type: none;
+	margin-bottom: 20px;
+}
+
+.proj > a,
+.proj > a img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.proj > a{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+.proj > a span{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	color: #FF761D;
+	text-align: right;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+	font-size: 24px;
+	opacity: 0;
+background: rgba(250, 250, 250, 0.9);
+	transition: opacity 0.3s linear;
+}
+
+.proj > a:hover span{
+	opacity: 1;
+}
+
+.lb-overlay {
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	z-index: 1002;
+	text-align: center;
+/*	background: adial-gradient(
+			center, 
+			ellipse cover, 
+			rgba(255,255,255,0.56) 0%,
+			rgba(241,210,194,1) 100%
+		);*/
+	background: rgba(250, 250, 250, 0.9);
+}
+
+.lb-overlay > div{
+	position: relative;
+	color: #FF761D;
+	width: 700px;
+	height: 80px;
+	margin: 40px auto 0px auto;
+/*	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);*/
+}
+
+.lb-overlay div h3,
+.lb-overlay div p{
+	padding: 0px 20px;
+	width: 200px;
+	height: 60px;
+}
+
+.lb-overlay div h3{
+	font-weight: 300;
+	font-size: 36px;
+	float: left;
+	text-align: right;
+	border-right: 1px solid #FF761D;
+}
+
+.lb-overlay div h3 span,
+.lb-overlay div p{
+	font-size: 16px;
+	font-style: italic;
+}
+
+.lb-overlay div h3 span{
+	display: block;
+	line-height: 6px;
+}
+
+.lb-overlay div p{
+	font-size: 15px;
+	text-align: left;
+	float: left;
+	width: 500px;
+}
+
+.lb-overlay a.lb-close {
+/*	background: #FF761D;*/
+	z-index: 1001;
+	color: #FF761D;
+	position: absolute;
+	top: 43px;
+	left: 50%;
+	font-size: 15px;
+	line-height: center;
+	text-align: center;
+	font-size: 20px;
+	overflow: hidden;
+	margin-left: -25px;
+	opacity: 0;
+}
+
+.lb-overlay img{
+	max-height: 100%;
+	position: relative;
+	opacity: 0;
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+	transition: opacity 0.5s linear;
+}
+
+.glyphicon-chevron-right, .glyphicon-chevron-left{
+/*	text-indent: -9000px;*/
+	position: absolute;
+	top: -20px ;
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	color:#FF761D ;
+}
+
+
+.glyphicon-chevron-right:hover, .glyphicon-chevron-left:hover{
+	opacity: 1;
+}
+
+.lb-prev:hover, .lb-next:hover{
+	opacity: 1;
+}
+
+.glyphicon-chevron-left{
+	margin-left: -30px;
+}
+
+.glyphicon-chevron-right{
+	margin-left: 6px;
+}
+
+
+.lb-overlay:target{
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	padding: 80px 100px 120px 100px;
+}
+
+.lb-overlay:target img,
+.lb-overlay:target a.lb-close{
+	opacity: 1;
+}
+
 
 .stars {
   position:absolute;

@@ -75,11 +75,16 @@ header {
 	position: relative;
 	z-index: 3;
 	top: 30px;
+	color: #F5CB5C;
 }
 
 #name.black-text{
 	color: #242423;
 
+}
+
+.some-black {
+	color: #242423;
 }
 
 .there {

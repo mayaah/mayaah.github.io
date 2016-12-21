@@ -11,12 +11,12 @@ body {
 
 /* 	background: #BAB53F;*/ /* green */
 /*	background: #659CEF;*/
-	background: #1e1e1e;
+	background: #242423;
 
 
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	color:#FFD700;
+	color:#F5CB5C;
 	letter-spacing: .1em;
 
 }
@@ -27,7 +27,7 @@ body {
 	top: 20px;
 	position: absolute;
 	position:fixed;
-	background: #FFD700;
+	background: #F5CB5C;
 	z-index: 3;
 	height: 1px;
 	width: calc(100% - 40px);
@@ -38,7 +38,7 @@ body {
 	top: 20px;
 	position: absolute;
 	position: fixed;
-	background: #FFD700;
+	background: #F5CB5C;
 	z-index: 3;
 	width: 1px;
 	height: calc(100% - 40px);
@@ -49,7 +49,7 @@ body {
 	left: 20px;
 	position: absolute;
 	position:fixed;
-	background: #FFD700;
+	background: #F5CB5C;
 	z-index: 3;
 	height: 1px;
 	width: calc(100% - 40px);
@@ -62,7 +62,7 @@ body {
 	height: calc(100% - 40px);
 	position: absolute;
 	position:fixed;
-	background: #FFD700;
+	background: #F5CB5C;
 	z-index: 3;
 }
 
@@ -75,6 +75,10 @@ header {
 	position: relative;
 	z-index: 3;
 	top: 30px;
+}
+
+#name.black-text{
+	color: #242423;
 
 }
 
@@ -109,15 +113,15 @@ header {
 	width: 100%;
 	position: absolute;
 	position: fixed;
-	background-color: #fcfcfc;
+	background-color: #FCF4E8;
     display:none;
-    color: #1e1e1e;
+    color: #242423;
     font-size: 12px;
     text-align: justify;
 }
 
 .column-title {
-	color: #FFD700;
+	color: #F5CB5C;
 	font-size: 15px;
 	font-weight: 500;
 }
@@ -128,7 +132,7 @@ header {
 	width: 100px;
 	border-width: 1px;
 	padding: 15px;
-	color: #FFD700;
+	color: #F5CB5C;
 	font-size: .8em;
 	margin-left: 10px;
 	text-decoration: none;
@@ -136,14 +140,14 @@ header {
 
 .about-div a {
 	text-decoration: none;
-	color: #FFD700;
+	color: #F5CB5C;
 }
 
 hr.style17 {
 	position: relative;
 	top: 20px;
 	padding-bottom: 20px;
-	border-top: 1px solid  #FFD700;
+	border-top: 1px solid  #F5CB5C;
 	width: 25%;
 	text-align: center;
 }
@@ -153,8 +157,8 @@ hr.style17:after {
 	position: relative;
 	top: -12px;
 	padding: 0 6px;
-	background: #fcfcfc;
-	color:  #FFD700;
+	background: #FCF4E8;
+	color:  #F5CB5C;
 	font-size: 10px;
 }
 
@@ -183,7 +187,7 @@ hr.style17:after {
 /*  font-size: 5px;*/
   overflow: hidden;
   float: left;
-   background:#FFD700;
+   background:#F5CB5C;
   transform: rotate(45deg);
   margin: 5.5%;
   margin-top: -12%;
@@ -216,7 +220,7 @@ hr.style17:after {
 
 
 .grid-item:hover {
-	background: #fcfcfc;
+	background: #FCF4E8;
   color: black;
   
 }
@@ -225,7 +229,7 @@ hr.style17:after {
   box-sizing: border-box;
   position: absolute;
   top:0;
-  color: #1e1e1e;
+  color: #242423;
   left: 0;
   width: 100%;
   height: 100%;
@@ -258,7 +262,7 @@ hr.style17:after {
   left:50%;
   top:0;
   position:fixed;
-  background: #fcfcfc;
+  background: #FCF4E8;
   display: none;
   align-items: center;
   justify-content: center;
@@ -270,7 +274,7 @@ hr.style17:after {
 /*  left:50%;*/
   top:0;
   position:fixed;
-  background: #1e1e1e;
+  background: #242423;
   align-items: center;
   justify-content: center;
   display: none;
@@ -284,7 +288,7 @@ hr.style17:after {
 	text-transform: uppercase;
 	font-size: 35px;
 	font-weight: 300;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .back {
@@ -318,7 +322,7 @@ hr.style17:after {
 	border-width: 1px;
 	float: right;
 	padding: 15px;
-	color: #1e1e1e;
+	color: #242423;
 	font-size: .8em;
 	margin-left: 10px;
 }
@@ -367,15 +371,15 @@ hr.style17:after {
 }
 
 .description {
-	color: #fcfcfc;
+	color: #FCF4E8;
 	font-size: .8em;
 	text-align: justify;
-	line-height: 3em;
+	line-height: 2em;
 	font-weight: 300;
 }
 
 .date {
-	color: #1e1e1e;
+	color: #242423;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 }
@@ -408,7 +412,7 @@ and (max-device-width : 480px){
 	  padding-bottom: 21.833%;*/
 /*	  overflow: hidden;*/
 	/*  float: left;*/
-/*	   background:#FFD700;*/
+/*	   background:#F5CB5C;*/
 	/*  transform: rotate(45deg);*/
 /*	  margin: 5.5%;
 	  margin-top: -12%;*/
@@ -436,7 +440,7 @@ and (max-device-width : 480px){
 
 
 	.grid-item:hover {
-/*	background: #fcfcfc;
+/*	background: #FCF4E8;
 	  color: black;*/
 	  
 	}
@@ -445,7 +449,7 @@ and (max-device-width : 480px){
 /*	  box-sizing: border-box;
 	  position: absolute;
 	  top:0;
-	  color: #1e1e1e;
+	  color: #242423;
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
@@ -453,12 +457,12 @@ and (max-device-width : 480px){
 	  font-size: .8em;*/
 	}
 
-	#name {
+/*	#name {
 	font-size: 14px;
 	position: relative;
 	z-index: 3;
 	top: 30px;
-	color:red;
+	color:red;*/
 
 	}
 }

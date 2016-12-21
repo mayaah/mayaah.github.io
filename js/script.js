@@ -9,9 +9,11 @@ $(document).ready(function() {
 	$('#aboutme').click(function () {
                 $('.about-div').slideToggle(300);
                 $( ".grid" ).fadeToggle( "4000", "linear" );
+                $("#name").toggleClass('black-text');
             });
 	// Panel open
 	$(".grid-item").click(function(){
+        $(".black").css("color", "#242423");
 		console.log('here');
 		var contentPanelId = $(this).attr("id");
 		console.log(contentPanelId);
@@ -33,6 +35,7 @@ $(document).ready(function() {
     // Panel close
     $(".back").click(function(){
     	console.log('hi');
+        $(".black").css("color", "#F5CB5C");
         $(open_right_panel).animate({width: 'toggle'});
         $( "#aboutme" ).fadeToggle( "4000", "linear" );
         // $( ".grid" ).fadeToggle( "4000", "linear" );

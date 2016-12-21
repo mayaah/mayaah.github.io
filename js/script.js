@@ -10,8 +10,13 @@ $(document).ready(function() {
                 $('.about-div').slideToggle(300);
                 $( ".grid" ).fadeToggle( "4000", "linear" );
                 $("#name").toggleClass('black-text');
-
+                if ($("#aboutme").text() == 'PROJECTS') {
+                   $(this).text('ABOUT ME');
+               } else {
+                   $(this).text('PROJECTS');
+               }
             });
+
 	// Panel open
 	$(".grid-item").click(function(){
         $(".black").toggleClass('some-black');

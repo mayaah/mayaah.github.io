@@ -9,7 +9,6 @@ $(document).ready(function() {
 	$('#aboutme').click(function () {
                 $('.about-div').slideToggle(300);
                 $( ".grid" ).fadeToggle( "4000", "linear" );
-                $("#name").toggleClass('black-text');
                 if ($("#aboutme").text() == 'PROJECTS') {
                    $(this).text('ABOUT ME');
                } else {
@@ -19,7 +18,6 @@ $(document).ready(function() {
 
 	// Panel open
 	$(".grid-item").click(function(){
-        $(".black").toggleClass('some-black');
 		console.log('here');
 		var contentPanelId = $(this).attr("id");
 		console.log(contentPanelId);
@@ -41,7 +39,6 @@ $(document).ready(function() {
     // Panel close
     $(".back").click(function(){
     	console.log('hi');
-        $(".black").toggleClass('some-black');
         $(open_right_panel).animate({width: 'toggle'});
         $( "#aboutme" ).fadeToggle( "4000", "linear" );
         // $( ".grid" ).fadeToggle( "4000", "linear" );

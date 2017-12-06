@@ -9,6 +9,7 @@ $(document).ready(function() {
 	$('#aboutme').click(function () {
                 $('.about-div').slideToggle(300);
                 $( ".grid" ).fadeToggle( "4000", "linear" );
+                $( "#my-photo" ).fadeToggle( "4000", "linear" );
                 if ($("#aboutme").text() == 'PROJECTS') {
                    $(this).text('ABOUT ME');
                } else {

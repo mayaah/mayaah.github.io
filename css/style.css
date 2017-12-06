@@ -20,16 +20,26 @@ body {
 	padding: 0;
 	margin: 0;
 	color: white;
-
-/* 	background: #BAB53F;*/ /* green */
-/*	background: #659CEF;*/
+	background: var(--fuschia);
 	background: -webkit-linear-gradient(135deg,  var(--bright-blue), var(--dark-purple), var(--hot-pink));
 	background-attachment: fixed;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	color: var(--off-white);
 	letter-spacing: .1em;
+	position: relative;
+}
 
+.my-photo-container {
+	height: 50%;
+	position: fixed;
+	bottom: 0;
+}
+
+#my-photo {
+	display: none;
+	width: 100%;
+	opacity: 0.1;
 }
 
 
@@ -313,6 +323,12 @@ hr.style17:after {
 	font-size: 35px;
 	font-weight: 300;
 	margin-bottom: 10px;
+	display: inline-block;
+	  color: var(--fuschia); /*non-webkit fallback*/
+	  text-transform: uppercase;
+	  background: -webkit-linear-gradient(135deg, var(--bright-blue), var(--dark-purple), var(--hot-pink));
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 }
 
 .back {
@@ -511,6 +527,12 @@ and (max-width : 480px){
 		font-size: 12px;
 		font-weight: 300;
 		margin-bottom: 5px;
+		display: inline-block;
+	  color: var(--fuschia); /*non-webkit fallback*/
+	  text-transform: uppercase;
+	  background: -webkit-linear-gradient(135deg, var(--bright-blue), var(--dark-purple), var(--hot-pink));
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 /*		margin-left: 20px;*/
 	}
 

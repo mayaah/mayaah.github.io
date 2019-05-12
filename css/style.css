@@ -133,6 +133,27 @@ header {
 	cursor: pointer;
 }
 
+#blog-text {
+	font-size: 14px;
+	position: absolute;
+	position: fixed;
+	z-index: 3;
+	bottom: 55px;
+	left: 40px;
+	cursor: pointer;
+	font-weight: 300;
+	color: var(--off-white);
+	letter-spacing: .1em;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#blog-text:hover {
+	text-shadow: 2px 2px 8px rgba(255,255,255,.5);
+}
+
 .about-text:hover {
 	text-shadow: 2px 2px 8px rgba(255,255,255,.5);
 }
@@ -161,6 +182,7 @@ header {
   -webkit-text-fill-color: transparent;
 	font-size: 15px;
 	font-weight: 500;
+	margin-bottom: 15px;
 }
 
 .resume {
@@ -171,7 +193,7 @@ header {
 	color: var(--fuschia);
 	font-size: 1em;
 	text-decoration: none;
-	margin: 0 auto;
+	margin: 60px auto;
 }
 
 .resume:hover{
@@ -471,6 +493,19 @@ and (max-width : 480px){
 		cursor: pointer;
 	}
 
+	#blog-text {
+		font-size: 14px;
+		position: absolute;
+		position: fixed;
+		z-index: 3;
+		bottom: 55px;
+		left: 40px;
+		cursor: pointer;
+		font-weight: 300;
+		color: var(--off-white);
+		letter-spacing: .1em;
+	}
+
 	.about-div{
 		z-index: 3;
 		padding: 20px;
@@ -488,13 +523,14 @@ and (max-width : 480px){
 
 	.column-title {
 		display: inline-block;
-	  color: var(--fuschia); /*non-webkit fallback*/
-	  text-transform: uppercase;
-	  background: -webkit-linear-gradient(135deg, var(--bright-blue), var(--dark-purple), var(--hot-pink));
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
+		  color: var(--fuschia); /*non-webkit fallback*/
+		  text-transform: uppercase;
+		  background: -webkit-linear-gradient(135deg, var(--bright-blue), var(--dark-purple), var(--hot-pink));
+		  -webkit-background-clip: text;
+		  -webkit-text-fill-color: transparent;
 		font-size: 10px;
 		font-weight: 500;
+		margin-bottom: 15px;
 	}
 
 	.resume {

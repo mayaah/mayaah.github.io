@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+      <title>Maya Angelica Hernandez</title>
+      <link rel="icon"
+            href="img/mayalogojpg.jpg">
+
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css"
+            rel="stylesheet">
+
+      <!--Custom CSS -->
+      <link id ="stylesheet"
+            href="css/style.css"
+            rel="stylesheet">
+
+      <!-- Custom Fonts -->
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" 
+            rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic' 
+            rel='stylesheet'
+            type='text/css'>
+      <script src="scripts/modernizr.js"></script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37048322-3"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-37048322-3');
+      </script>
+
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body class="white-background">
+
+    <!-- Borders  -->
+    <span class="bt black-background"></span>
+    <span class="br black-background"></span>
+    <span class="bb black-background"></span>
+    <span class="bl black-background"></span>
+
+    <!-- Name -->
+    <header>
+      <div id="name">
+        <a href="index.html" style="color: black;">MAYA ANGELICA HERNANDEZ</a>
+      </div>
+    </header>
+
+    <div class="information-container">
+      <div class="information-contents black-text">
+        <div class="column-title">Samaya Playlist</div>
+        <div class="date">
+          March 2023
+        </div>
+        <div>
+          <div class="button-row">
+            <a href="https://open.spotify.com/playlist/0AUCzaEyiZlXltHi38b8aR?si=4cbabbb055f84299" target="_blank">
+              <div class="link-button">
+                Go to Playlist
+              </div>
+            </a>
+          </div>
+          <p>
+            My partner and I were disatisfied with Spotify's blend feature. It would not update everyday and did not reflect our current listening habits. I decided I could make a better Spotify blend for us.
+          </p>
+          <p>
+            I repurposed <b>Python</b> code I found online with the <b>SpotiPy API</b> using my own Spotify developer credentials to randomly choose songs from both of our Daily Mix playlists, which better reflected what we were currently listening to, and shuffled them randomly into a long playlist everyday at the same time around 2AM EST using <b>AWS EventBridge CloudWatch Events</b> to trigger a <b>AWS Lambda</b> function with the code to update this playlist everyday.
+          </p>
+          <div class="image-grid-row">
+            <div class="image-grid-column">
+              <img class="grid-image" src="img/samaya-0.png">
+              <img class="grid-image" src="img/samaya-3.png" alt="Daily EventBridge trigger">
+            </div>
+            <div class="image-grid-column">
+              <img class="grid-image" src="img/samaya-1.gif" alt="Lambda code">
+            </div>
+            <div class="image-grid-column">
+              <img class="grid-image" src="img/samaya-2.png" alt="Metrics">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close-button">&times;</span>
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+      <a href="projects.html">
+        <div class="back">
+          <img src="img/back-black.png">
+        </div>
+      </a>
+      <div id="social">
+        <a href="mailto:mayaah@berkeley.edu" target="_blank" class="icons">
+          <img src="img/email-black.png">
+        </a>
+        <a href="http://github.com/mayaah" target="_blank" class="icons">
+          <img src="img/gh-black.png">
+        </a>
+        <a href="http://www.linkedin.com/in/mayaah" target="_blank" class="icons">
+          <img src="img/li-black.png">
+        </a>
+        <a href="http://www.youtube.com/channel/UCA9LKLw8TGmIiA_LF3N2_bw" target="_blank" class="icons">
+          <img src="img/yt-black.png">
+        </a>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.JavaScript"></script>
+    <script src="js/jquery.panelslider.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+
+  </body>
+</html>
